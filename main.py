@@ -4,7 +4,7 @@ import re
 def find_names(file):
     with open('test1.txt', encoding='utf8') as f:
         contents = f.read()
-        pattern = re.compile(r'[А-Я]{1}[а-я]+\s[А-Я]{1}[а-я]+\s[А-Я]{1}[а-я]+|[А-Я]{1}[а-я]+\s[А-Я]{1}[.][А-Я]{1}[.]')
+        pattern = re.compile(r'[А-Я][а-я]+\s[А-Я][а-я]+\s[А-Я][а-я]+|[А-Я][а-я]+\s[А-Я][.][А-Я][.]')
         result = pattern.findall(contents)
     return result
 
